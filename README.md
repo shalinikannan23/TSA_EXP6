@@ -32,7 +32,7 @@ from statsmodels.tsa.holtwinters import ExponentialSmoothing
 from sklearn.metrics import mean_squared_error
 
 # Load the dataset
-file_path = 'crypto_sales.csv'  # Path to the uploaded dataset
+file_path = 'coin_Bitcoin.csv'  # Path to the uploaded dataset
 data = pd.read_csv(file_path)
 
 # Convert 'Date' to datetime format

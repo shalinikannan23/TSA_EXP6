@@ -2,7 +2,6 @@
 ## REGISTER NO: 212222240095
 ## DATE:
 
-
 # Ex.No: 6               HOLT WINTERS METHOD
 
 ### AIM:
@@ -37,10 +36,8 @@ data = pd.read_csv(file_path)
 
 # Convert 'Date' to datetime format
 data['Date'] = pd.to_datetime(data['Date'])
-
 # Group data by date and resample it to month-end frequency ('ME') based on the 'Close' price
 monthly_data = data.resample('ME', on='Date').sum()
-
 # Plot the time series data (using 'Close' prices)
 plt.figure(figsize=(10, 5))
 plt.plot(monthly_data['Close'], label='Monthly Close Prices')
@@ -49,7 +46,6 @@ plt.xlabel('Date')
 plt.ylabel('Close Price')
 plt.legend()
 plt.show()
-
 # Split data into training and testing sets (80% for training, 20% for testing)
 train_size = int(len(monthly_data) * 0.8)
 train, test = monthly_data['Close'][:train_size], monthly_data['Close'][train_size:]
@@ -101,7 +97,6 @@ plt.tight_layout()
 plt.show()
 
 ```
-
 ### OUTPUT:
 
 TEST AND FINAL PREDICTION:
